@@ -1,4 +1,4 @@
-package src;
+package com.james.flynn;
 
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;

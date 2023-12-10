@@ -1,11 +1,11 @@
-package src;
+package com.james.flynn;
 
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import src.Utils;
+import com.james.flynn.Utils;
 
 public class Day1 {
     public static void main(String[] args) {
