@@ -5,6 +5,7 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.io.File;
 import java.io.IOException;
 import java.util.List;
 import java.util.ArrayList;
@@ -20,9 +21,10 @@ public class Utils {
     }
     public static ArrayList<ArrayList<String>> readFileDelimitedInput(String fileName, String delimiter) throws IOException{
         ArrayList<ArrayList<String>> fileArray = new  ArrayList<ArrayList<String>> ();
-        try (Scanner scanner =  new Scanner(fileName)){
-            ArrayList<String> processedLine = new ArrayList<String>();
+        File file = new File(fileName);
+        try (Scanner scanner =  new Scanner(file)){
             while(scanner.hasNextLine()){
+                ArrayList<String> processedLine = new ArrayList<String>();
                 String line = scanner.nextLine();
                 Scanner lineScanner = new Scanner(line);
                 lineScanner.useDelimiter(delimiter);
@@ -32,9 +34,8 @@ public class Utils {
                 fileArray.add(processedLine);
                 lineScanner.close();
             }
-            return fileArray;
         }
-
+            return fileArray;
 
     }
 

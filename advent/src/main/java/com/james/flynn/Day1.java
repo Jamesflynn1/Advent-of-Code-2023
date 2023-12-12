@@ -13,7 +13,7 @@ public class Day1 {
 
         int total = 0;
         try{
-        inArr = Utils.readFileLineInput("../data/Day1.txt");
+        inArr = Utils.readFileLineInput("advent/data/Day1.txt");
         }
         catch (IOException e){
             System.out.println(e);
