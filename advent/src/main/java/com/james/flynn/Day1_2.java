@@ -10,6 +10,7 @@ import com.james.flynn.Utils;
 
 public class Day1_2{
     //Prefix and postfix to maintain words for possible subsequent matchings
+    //In reality we only need the last one or two characters (characters that could lead to an additional match)
     public static String digitiseLine(String line){
     String [][]digitsEncoding = {{"one","one1one"},{"two", "two2two"},
                        {"three", "three3three"}, {"four", "four4four"},
